@@ -1,0 +1,29 @@
+{
+  "name": "esbuild-template",
+  "version": "1.0.0",
+  "description": "template for esbuild projects",
+  "main": "build/main.js",
+  "scripts": {
+    "dev": "cross-env DEV=true concurrently -k \"npm:serve\" \"npm:watch\"",
+    "watch": "node build.mjs --watch",
+    "serve": "live-server build --no-browser --port=3000 --host=localhost",
+    "build": "node build.mjs",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shyguy1412/esbuild-template.git"
+  },
+  "author": "Shy",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/shyguy1412/esbuild-template/issues"
+  },
+  "homepage": "https://github.com/shyguy1412/esbuild-template#readme",
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "cross-env": "^7.0.3",
+    "esbuild": "^0.20.1",
+    "live-server": "^1.2.2"
+  }
+}
